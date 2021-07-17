@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorBoundary When mounted renders correctly 1`] = `"Some child"`;
+
+exports[`ErrorBoundary When mounted then it errors renders correctly 1`] = `
+<div
+  className="errorBoundaryContainer"
+>
+  <h1>
+    error-boundary-default-title
+  </h1>
+  <p>
+    error-boundary-default-msg
+  </p>
+  <div
+    className="tryAgainBtnWrapper"
+  >
+    <div
+      className="buttonContainer default undefined"
+    >
+      <div
+        className="button md enabled action"
+        onClick={[Function]}
+        title="Try Again"
+      >
+        <div
+          className="contentContainer left"
+        >
+          <div
+            className="labelWrapper"
+          >
+            <div
+              className="labelContainer default undefined labelContainer wrap"
+            >
+              <div
+                className="label md enabled left unselectable none"
+                title="Try Again"
+              >
+                Try Again
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

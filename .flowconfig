@@ -1,0 +1,15 @@
+[ignore]
+<PROJECT_ROOT>/build/*
+<PROJECT_ROOT>/coverage/*
+<PROJECT_ROOT>/flow-typed/*
+
+[declarations]
+<PROJECT_ROOT>/node_modules/*
+
+[include]
+
+[options]
+module.name_mapper.extension='svg' -> '<PROJECT_ROOT>/SVGModule.js.flow'
+module.name_mapper.extension='scss' -> '<PROJECT_ROOT>/ScssModule.js.flow'
+
+[lints]

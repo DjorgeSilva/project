@@ -1,0 +1,89 @@
+{
+  "name": "Squirkle",
+  "version": "0.1.0",
+  "private": true,
+  "author": "MyName <my@name.com>",
+  "homepage": "/",
+  "scripts": {
+    "start": "atomizer-scripts start",
+    "build": "atomizer-scripts build",
+    "test": "atomizer-scripts test",
+    "add-react-component": "atomizer-scripts addReactComponent",
+    "add-view": "atomizer-scripts addViewComponent",
+    "prettier": "prettier --write \"src/**/*.js\"",
+    "flow:check": "flow check",
+    "lint": "atomizer-scripts lint",
+    "start:desktop": "cross-env NODE_ENV=development atomizer-desktop-scripts start",
+    "build:desktop": "atomizer-desktop-scripts build",
+    "images:desktop": "atomizer-desktop-scripts images",
+    "create-native-addon": "atomizer-desktop-scripts createAddon",
+    "build-native-addons": "atomizer-desktop-scripts buildAddons"
+  },
+  "dependencies": {
+    "@atomos/atomix": "3.0.0-alpha2",
+    "@atomos/atomizer-desktop": "~2.0.0-alpha39",
+    "@atomos/atomizer-utils": "^2.0.0-alpha39",
+    "@capacitor/core": "^2.0.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "@react-google-maps/api": "^1.8.1",
+    "bindings": "^1.5.0",
+    "classnames": "^2.2.6",
+    "cors": "^2.8.5",
+    "electron-log": "^4.2.0",
+    "express": "^4.17.1",
+    "http-server": "^0.12.3",
+    "lodash": "4.17.15",
+    "mobx": "^5.14.2",
+    "mobx-react-lite": "^2.0.7",
+    "node-addon-api": "^3.0.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-image-crop": "^8.6.5",
+    "react-router": "^5.1.0",
+    "react-router-dom": "^5.1.0",
+    "react-youtube": "^7.13.0",
+    "typeface-roboto": "0.0.75"
+  },
+  "devDependencies": {
+    "@atomos/atomizer-android": "^2.0.0-alpha39",
+    "@atomos/atomizer-desktop-scripts": "~2.0.0-alpha39",
+    "@atomos/atomizer-scripts": "^2.0.0-alpha39",
+    "@atomos/eslint-config-atomizer": "^2.0.0-alpha39",
+    "@capacitor/cli": "^2.0.1",
+    "cross-env": "^7.0.3",
+    "electron": "^8.2.5",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "enzyme-to-json": "^3.6.1",
+    "flow-bin": "^0.118.0",
+    "prettier": "^1.19.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "@atomos/eslint-config-atomizer"
+    ]
+  },
+  "productName": "Spotify",
+  "build": {
+    "linux": {
+      "target": "deb"
+    },
+    "appId": "com.atomizer.squirkle",
+    "productName": "Squirkle"
+  }
+}

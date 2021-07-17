@@ -1,0 +1,1 @@
+declare export default { [x: string]: string }

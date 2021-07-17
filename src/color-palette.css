@@ -1,0 +1,14 @@
+:root {
+	--color-gray-1: #FFF;
+	--color-gray-2: #F5F5F5;
+	--color-gray-3: #E0E0E0;
+	--color-gray-4: #CCC;
+	--color-gray-5: #A0A0A0;
+	--color-gray-9: #2F2F2F;
+	--color-gray-10: #000;
+
+	--color-primary: var(--color-gray-1);
+	--color-primary-alt: var(--color-gray-2);
+
+	--color-brand: #26D34E;
+}

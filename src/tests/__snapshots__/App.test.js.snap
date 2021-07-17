@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App When mounted (not login) and we navigate to login renders correctly 1`] = `
+<mock-errorboundary>
+  <mock-DraggableArea />
+  Array [
+    "",
+    <mock-NowPlayingSongPlayer />,
+    <mock-login />,
+  ]
+</mock-errorboundary>
+`;
+
+exports[`App When mounted (not login) renders correctly 1`] = `
+<mock-errorboundary>
+  <mock-DraggableArea />
+  Array [
+    "",
+    <mock-NowPlayingSongPlayer />,
+    <mock-Header />,
+    <mock-MobileMenu />,
+    <mock-maincontent>
+      <mock-errorboundary>
+        My app
+      </mock-errorboundary>
+    </mock-maincontent>,
+    <mock-NowPlayingBar />,
+  ]
+</mock-errorboundary>
+`;

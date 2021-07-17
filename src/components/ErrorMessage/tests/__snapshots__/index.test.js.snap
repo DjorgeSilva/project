@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorMessage When mounted renders correctly 1`] = `
+<div
+  className="errorMessageContainer"
+>
+  Something went wrong
+</div>
+`;
