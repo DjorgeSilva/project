@@ -6,7 +6,7 @@
  */
 //imports
 
-import { app } from 'electron'
+import { app, screen } from 'electron'
 import path from 'path'
 import os from 'os'
 import cors from 'cors'
@@ -102,17 +102,15 @@ if (app.dock && process.env.NODE_ENV === 'development') {
   app.dock.setBadge('DEV!')
 }
 // =================
-
 // =================
 // Windows Declaration
 // =================
-let splashScreenWindow
 // =================
 
 // =================
 // Splash Screen Window
 // =================
-splashScreenWindow = createWindow('splashWindow', 'build.empty.html', {
+const splashScreenWindow = createWindow('splashWindow', 'build.empty.html', {
   show: false,
   frame: false,
   transparent: false,
@@ -128,6 +126,25 @@ splashScreenWindow = createWindow('splashWindow', 'build.empty.html', {
   }
 })
 // =================
+const {width, height} = screen.getPrimaryDisplay().workAreaSize
+
+const mainScreenWindow = createWindow('mainWindow', 'build.empty.html',{
+  show: false,
+  resizable: true,
+  transparent: false,
+  width: width,
+  height: height,
+  icon: ICON_PATH,
+  webPreferences:{
+    nodeIntegration: true
+  }
+})
+
+// Main Screen Window
+// =================
+
+// ================= 
+
 
 // =================
 // IPC Window Controller
@@ -138,7 +155,13 @@ subscribeWithIpc(
   ({ message, fromWindowId }) => {
     switch (message) {
       case 'mainWindow':
-        console.log(`mainWindow requested by ${fromWindowId}`)
+        showWindow('mainWindow')
+        mainScreenWindow.electronWindow().loadURL(`http://localhost:${HTTP_PORT}#/main`)
+
+        if (process.env.NODE_ENV === 'development') {
+          mainScreenWindow.electronWindow.webContents.openDevTools()
+        }
+
         break;
 
       default:
@@ -171,9 +194,9 @@ function start(): void {
   showWindow('splashWindow')
   splashScreenWindow.electronWindow.loadURL(`http://localhost:${HTTP_PORT}#/splash`)
 
-  if (process.env.NODE_ENV === 'development') {
-    splashScreenWindow.electronWindow.webContents.openDevTools()
-  }
+  // if (process.env.NODE_ENV === 'development') {
+  //   splashScreenWindow.electronWindow.webContents.openDevTools()
+  // }
 }
 
 start()

@@ -1,0 +1,13 @@
+.homeViewContainer {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+
+ & .txt{
+    color: #000;
+  }
+}
+
+.homeViewContainer section {
+  margin-top: 50px;
+}

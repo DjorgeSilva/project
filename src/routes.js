@@ -12,15 +12,15 @@ const routes: Array<RouteDefinitionType> = [{
         label: 'Error'
     },
     {
-        path: '/',
-        name: 'home',
-        label: 'Home'
-    },
-    {
         path: '/splash',
         name: 'splash',
         label: 'Splash'
-    }
+    },
+    {
+        path: '/main',
+        name: 'main',
+        label: 'Main'
+    },
 ]
 
 export const getRouteByName = (name: string): RouteDefinitionType => {

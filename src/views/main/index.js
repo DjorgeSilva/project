@@ -7,7 +7,7 @@ import styles from './styles.module.css'
 export default (): React$Element<*> => {
   return (
     <div className={styles.homeViewContainer}>
-      <h1>Home</h1>
+      <h1 className="txt">Main</h1>
     </div>
   )
 }

@@ -56,8 +56,7 @@ const SplashView = (props: PropTypes): React$Element<*> => {
 
   useEffect(() => {
 
-    // eslint-disable-next-line
-    const timeout = setTimeout(()=>{
+    setTimeout(()=>{
       console.log('Executing timeout')
       hideWindow({message: 'splashWindow'})
       openWindow({message: 'mainWindow'})
