@@ -156,11 +156,11 @@ subscribeWithIpc(
     switch (message) {
       case 'mainWindow':
         showWindow('mainWindow')
-        mainScreenWindow.electronWindow().loadURL(`http://localhost:${HTTP_PORT}#/main`)
+        mainScreenWindow.electronWindow.loadURL(`http://localhost:${HTTP_PORT}#/main`)
 
-        if (process.env.NODE_ENV === 'development') {
-          mainScreenWindow.electronWindow.webContents.openDevTools()
-        }
+        // if (process.env.NODE_ENV === 'development') {
+        //   mainScreenWindow.electronWindow.webContents.openDevTools()
+        // }
 
         break;
 
